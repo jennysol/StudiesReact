@@ -21,6 +21,14 @@ export function Post() {
         <p>-- Atenciosamente, Cacau Francisca.</p>
         <a href="#">#petisco</a>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+        <textarea
+          placeholder='Deixe um comentário'
+        />
+        <button type='submit'>Comentar</button>
+      </form>
     </article>
   );
 }
