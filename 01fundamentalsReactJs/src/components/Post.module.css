@@ -117,3 +117,7 @@
   animation: pulse 1s;
   transition: all ease-in-out 0.3s;
 }
+
+.commentList {
+  margin-top: 2rem;
+}
