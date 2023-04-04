@@ -91,19 +91,29 @@
   margin-top: 1rem;
 }
 
-.commentForm > button[type=submit] {
-  padding: 1rem 1.5rem;
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+  transition: all ease-in-out 0.3;
+}
+
+.commentForm button {
   margin-top: 1rem;
   border-radius: 8px;
-  border: 0;
+  padding: 1rem 1.5rem;
   background: var(--green-500);
   color: var(--white);
   font-weight: bold;
   cursor: pointer;
-
-  transition: background-color 0.1s;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button:hover {
   background: var(--green-300);
+  animation: pulse 1s;
+  transition: all ease-in-out 0.3s;
 }
