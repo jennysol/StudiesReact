@@ -1,14 +1,7 @@
-
 .comment {
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
-}
-
-.comment > img {
-  width: calc(3rem + 12px);
-  height: calc(3rem + 12px);
-  border-radius: 8px;
 }
 
 .commentBox {
@@ -27,15 +20,15 @@
   justify-content: space-between;
 }
 
-.authorAndTime  strong{
+.authorAndTime strong {
   display: block;
-  font-size: 0.785rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
-.authorAndTime  time{
+.authorAndTime title {
   display: block;
-  font-size: 0.785rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: var(--gray-400);
 }
@@ -50,11 +43,11 @@
   border-radius: 2px;
 }
 
-.commentContent header:button {
+.commentContent header button:hover {
   color: var(--red-500);
 }
 
-.commentBox p {
+.commentContent p {
   margin-top: 1rem;
   color: var(--gray-300);
 }
@@ -76,7 +69,7 @@
 }
 
 .commentBox footer button:hover {
-  color: var(--gray-300);
+  color: var(--green-300);
 }
 
 .commentBox footer button sgv {
