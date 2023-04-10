@@ -1,6 +1,7 @@
-import styles from './Post.module.css';
 import {Comment} from './Comment.jsx';
-import { Avatar } from './Avatar';
+import {Avatar} from './Avatar';
+
+import styles from './Post.module.css';
 
 export function Post() {
   return (
@@ -8,6 +9,7 @@ export function Post() {
       <header>
         <div className={styles.author}>
           <Avatar src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3388&q=80"/>
+          
           <div className={styles.authorInfo}>
             <strong>Cacau Francisca</strong>
             <span>Back-end Developer</span>
@@ -33,12 +35,12 @@ export function Post() {
         <footer>
           <button type='submit'>Comentar</button>
         </footer>
-
-        <div className={styles.commentList}>
-          <Comment/>
-          <Comment/>
-        </div>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment/>
+        <Comment/>
+      </div>
     </article>
   );
 }
