@@ -5,7 +5,7 @@ export function Comment() {
   return (
     <div className={styles.comment}>
       <img src="https://avatars.githubusercontent.com/u/62623621?v=4" />
-      <div className={styles.contentBox}>
+      <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
@@ -21,8 +21,8 @@ export function Comment() {
 
         <footer>
           <button>
-            <ThumbsUp />
-            Aplaudir <span>20</span>
+            <ThumbsUp size={20} />
+            Aplaudir <span> 20 </span>
           </button>
         </footer>
       </div>
