@@ -22,10 +22,9 @@ const posts = [
     publishedAt: new Date('2023-04-09 20:00:00')
   },
   {
-    id: 1,
+    id: 2,
     author: {
-      avatarUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3362&q=80',
-      name: 'Cacau Emocionada',
+      avatarUrl: 'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80',
       role: 'Dev front-end'
     },
     content: [
@@ -49,12 +48,13 @@ function App() {
           {posts.map(post => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
               />
             )
-          }) }
+          })}
         </main>
       </div>
     </div>
