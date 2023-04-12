@@ -1,11 +1,12 @@
 import { Header } from './components/Header';
-import { Post } from './components/Post';
+import { Post, PostType } from './components/Post';
 import { Sidebar } from './components/Sidebar';
 
 import './global.css';
-import styles from 'App.module.css';
+import styles from './App.module.css';
 
-const posts = [
+
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -17,13 +18,14 @@ const posts = [
       { type: 'paragraph', content: 'AU AU AU pessoal!'},
       { type: 'paragraph', content: 'Descobri que sou mimado >.<.'},
       { type: 'paragraph', content: '- Mundico.'},
-      { type: 'link', content: '#petisco'}
+      { type: 'link',      content: '#petisco'}
     ],
     publishedAt: new Date('2023-04-09 20:00:00')
   },
   {
     id: 2,
     author: {
+      name: 'Cacau Francisca',
       avatarUrl: 'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80',
       role: 'Dev front-end'
     },
@@ -31,7 +33,7 @@ const posts = [
       { type: 'paragraph', content: 'AU dog peoples!'},
       { type: 'paragraph', content: 'Minha humana n me alimenta de forma digna e eu estou com saudade do deus do parcao, vulgo, Raimundo.'},
       { type: 'paragraph', content: '-- Atenciosamente, Cacau Emocionada.'},
-      { type: 'link', content: '#petiscoeharte'}
+      { type: 'link',      content: '#petiscoeharte'}
     ],
     publishedAt: new Date('2023-04-09 20:00:00')
   },
@@ -46,12 +48,11 @@ function App() {
         <Sidebar/>
         <main>
           {posts.map(post => {
+            console.log('post', post)
             return (
               <Post
                 key={post.id}
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
+                post={post}
               />
             )
           })}
